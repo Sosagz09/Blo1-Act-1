@@ -74,7 +74,7 @@ namespace ISNP066724_Bloque1
         }
         static void Positivo_o_Negativo()
         {
-            Console.WriteLine("Positivo_o_Negativo");
+            Console.WriteLine("\nPositivo_o_Negativo");
             int numero;
 
             do
