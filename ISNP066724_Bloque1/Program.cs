@@ -14,7 +14,7 @@ namespace ISNP066724_Bloque1
             {
                 //Bloque 1 - Actividad 1 - Conociendo los fundamentos de la programacion.
                 Console.WriteLine("\n........ISNP066724_Bloque1........");
-                Console.WriteLine("\n Guia de Ejercicios");
+                Console.WriteLine("\n Guia de Ejercicios:");
                 Console.WriteLine("1. Positivo_o_Negativo");
                 Console.WriteLine("2. Resta");
                 Console.WriteLine("3. Multiplicacion");
