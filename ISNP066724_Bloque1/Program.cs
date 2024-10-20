@@ -13,7 +13,7 @@ namespace ISNP066724_Bloque1
             while (continuar == "s")
             {
                 //Bloque 1 - Actividad 1 - Conociendo los fundamentos de la programacion.
-                Console.WriteLine("........ISNP066724_Bloque1↓");
+                Console.WriteLine("........ISNP066724_Bloque1.........");
                 Console.WriteLine("\nLista de programas:");
                 Console.WriteLine("1. Positivo o Negativo");
                 Console.WriteLine("2. Tabla de multipicar");
