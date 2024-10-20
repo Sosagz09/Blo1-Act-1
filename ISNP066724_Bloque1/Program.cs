@@ -13,21 +13,19 @@ namespace ISNP066724_Bloque1
             while (continuar == "s")
             {
                 //Bloque 1 - Actividad 1 - Conociendo los fundamentos de la programacion.
-                Console.WriteLine("........ISNP066724_Bloque1........");
+                Console.WriteLine("........ISNP066724_Bloque1↓");
                 Console.WriteLine("\nLista de programas:");
-                Console.WriteLine("1. Positivo_o_Negativo");
-                Console.WriteLine("2. TablaMultipicar");
-                Console.WriteLine("3. Multiplicacion");
-                Console.WriteLine("4. Division");
-                Console.WriteLine("5. Exponeciacion");
-                Console.WriteLine("6. Raiz");
-                Console.WriteLine("7. Factorial");
-                Console.WriteLine("8. Acumulador");
+                Console.WriteLine("1. Positivo o Negativo");
+                Console.WriteLine("2. Tabla de multipicar");
+                Console.WriteLine("3. Acumulador");
+                Console.WriteLine("4. Determinar numero primo");
+                Console.WriteLine("5. Calcular promedio");
                 Console.WriteLine("Salir cualquiera");
                 Console.Write("Opcion: ");
                 int opcion = int.Parse(Console.ReadLine());
 
                 Console.Clear();
+
                 switch (opcion)
                 {
                     case 1:
@@ -37,22 +35,13 @@ namespace ISNP066724_Bloque1
                         TablaMultipicar();
                         break;
                     case 3:
-                        multiplicacion();
+                        Acumulador();
                         break;
                     case 4:
-                        division();
+                        DeterminarNumeroPrimo();
                         break;
                     case 5:
-                        exponenciacion();
-                        break;
-                    case 6:
-                        raiz();
-                        break;
-                    case 7:
-                        factorial();
-                        break;
-                    case 8:
-                        acumulador();
+                        Calcularpromedio();
                         break;
                     default:
                         continuar = "n";
@@ -60,26 +49,17 @@ namespace ISNP066724_Bloque1
                 }
             }
         }
-        static void acumulador()
-        {
-            int acumulador = 0,
-                num = 0;
-            do
-            {
-                Console.Write("Num: ");
-                num = int.Parse(Console.ReadLine());
-                acumulador += num;
-            } while (num > 0);
-            Console.WriteLine("El acumulador es igual a: {0}", acumulador);
-        }
+        
+
+
         static void Positivo_o_Negativo()
         {
-            Console.WriteLine("Positivo_o_Negativo");
+            Console.WriteLine("Positivo o Negativo");
             int numero;
 
             do
             {
-                Console.WriteLine("\nIngresa un número:");
+                Console.WriteLine("\nIngresa un número");
                 Console.WriteLine("(0 para salir)");
                 numero = int.Parse(Console.ReadLine());
 
@@ -99,22 +79,25 @@ namespace ISNP066724_Bloque1
             } while (numero != 0);
 
             Console.WriteLine("PROGRAMA TERMINADO");
+            Console.Clear();
         }
+        
+        
         static void TablaMultipicar()
         {
-            Console.WriteLine("TablaMultipicar");
+            Console.WriteLine("Tabla de multipicar");
             int numero;
 
             do
             {
-                Console.Write("\nIngresa un número entre 1 y 10:");
-                Console.WriteLine("(0 para salir");
+                Console.WriteLine("\nIngresa un número entre 1 y 10");
+                Console.WriteLine("(0 para salir)");
                 numero = int.Parse(Console.ReadLine());
 
                 if (numero > 0 && numero <= 10)
                 {
                     Console.WriteLine($"\nTabla de multiplicar del {numero}:");
-
+                    //listar la tabla respectiva
                     
                     for (int i = 1; i <= 10; i++)
                     {
@@ -130,63 +113,110 @@ namespace ISNP066724_Bloque1
             } while (numero != 0);
 
             Console.WriteLine("PROGRAMA TERMINADO");
+            Console.Clear();
         }
-        static void multiplicacion()
+        
+        
+        static void Acumulador()
         {
-            Console.Write("Num 1: ");
-            double num1 = double.Parse(Console.ReadLine());
-
-            Console.Write("Num 2: ");
-            double num2 = double.Parse(Console.ReadLine());
-
-            double respuesta = num1 * num2;
-            Console.WriteLine("La multiplicacion es igual a: {0}", respuesta);
-        }
-        static void division()
-        {
-            Console.Write("Num 1: ");
-            double num1 = double.Parse(Console.ReadLine());
-
-            Console.Write("Num 2: ");
-            double num2 = double.Parse(Console.ReadLine());
-
-            double respuesta = num1 / num2;
-            Console.WriteLine("La division es igual a: {0}", respuesta);
-        }
-        static void exponenciacion()
-        {
-            Console.Write("Base: ");
-            double num1 = double.Parse(Console.ReadLine());
-
-            Console.Write("Exponenete: ");
-            double num2 = double.Parse(Console.ReadLine());
-
-            double respuesta = Math.Pow(num1, num2);
-            Console.WriteLine("La base {0} elevado a {1} es igual a: {2}", num1, num2, respuesta);
-        }
-        static void raiz()
-        {
-            Console.Write("Radicando: ");
-            double num1 = double.Parse(Console.ReadLine());
-
-            Console.Write("Indice: ");
-            double num2 = double.Parse(Console.ReadLine());
-
-            double respuesta = Math.Pow(num1, 1 / num2);// raiz 2 de 16 = 16^(1/2)=4
-            Console.WriteLine("La raiz del radicando {0} del indice {1} es igual a: {2}", num1, num2, respuesta);
-        }
-        static void factorial()
-        {
-            Console.WriteLine("Factorial");
-            Console.Write("Num: ");
-            double num = double.Parse(Console.ReadLine());
-            //5! = 5*4*3*2= 120
-            double respuesta = 1;
-            for (int i = 2; i <= num; i++)
+            Console.WriteLine("Acumulador de numeros");
+            int acumulador = 0,
+                 num = 0;
+            do
             {
-                respuesta *= i; //factorial = factorial * i;
+                Console.WriteLine("\nIngresa un número");
+                Console.WriteLine("(0 para finalizar)");
+                num = int.Parse(Console.ReadLine());
+                acumulador += num;
+            } while (num > 0);
+            Console.WriteLine("El acumulador es igual a: {0}\n", acumulador);
+        }
+       
+        
+        static void DeterminarNumeroPrimo()
+        {
+            Console.WriteLine("Determinar numero primo");
+            int numero;
+
+            do
+            {
+                Console.WriteLine("\nIngresa un número para verificar si es primo");
+                Console.WriteLine("(0 para salir)");
+                numero = int.Parse(Console.ReadLine());
+
+                if (numero != 0)
+                {
+                    if (EsPrimo(numero))
+                    {
+                        Console.WriteLine($"El número {numero} es primo.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"El número {numero} no es primo.");
+                    }
+                }
+
+            } while (numero != 0);
+
+            Console.WriteLine("PROGRAMA FINALIZADO\n");
+            Console.Clear();
+        }
+
+
+
+        static bool EsPrimo(int numero)
+        {
+            // Los números menores o iguales a 1 no son primos
+            if (numero <= 1)
+            {
+                return false;
             }
-            Console.WriteLine("El factorial de {0} es igual a: {1}", num, respuesta);
+
+            // Verificar si el número es divisible por algún número entre 2 y la raíz cuadrada del número
+            for (int i = 2; i <= Math.Sqrt(numero); i++)
+            {
+                if (numero % i == 0)
+                {
+                    return false; // Si es divisible por otro número, no es primo
+                }
+            }
+            return true; // Si no fue divisible por ningún número, es primo
+        }
+        static void Calcularpromedio()
+        {
+            Console.WriteLine("Calcular Promedio");
+            int numero;
+            int suma = 0;
+            int contador = 0;
+
+            do
+            {
+                Console.WriteLine("Ingresa un número");
+                Console.WriteLine("(0 para finalizar)");
+                numero = int.Parse(Console.ReadLine());
+
+                if (numero != 0)
+                {
+                    suma += numero;
+                    contador++;     // Incrementar el contador de números ingresados
+                }
+
+            } while (numero != 0);
+
+            // Calcular el promedio solo si se ingresaron números
+            if (contador > 0)
+            {
+                double promedio = (double)suma / contador;
+                Console.WriteLine($"El promedio de los números ingresados es: {promedio}");
+            }
+            else
+            {
+                Console.WriteLine("No se ingresaron números válidos para calcular un promedio.");
+            }
+
+            Console.WriteLine("PROGRAMA TERMINADO\n");
+            
         }
     }
+
 }
