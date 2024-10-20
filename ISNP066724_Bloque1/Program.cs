@@ -13,10 +13,10 @@ namespace ISNP066724_Bloque1
             while (continuar == "s")
             {
                 //Bloque 1 - Actividad 1 - Conociendo los fundamentos de la programacion.
-                Console.WriteLine("\n........ISNP066724_Bloque1........");
-                Console.WriteLine("\n Guia de Ejercicios:");
+                Console.WriteLine("........ISNP066724_Bloque1........");
+                Console.WriteLine("\nLista de programas:");
                 Console.WriteLine("1. Positivo_o_Negativo");
-                Console.WriteLine("2. Resta");
+                Console.WriteLine("2. TablaMultipicar");
                 Console.WriteLine("3. Multiplicacion");
                 Console.WriteLine("4. Division");
                 Console.WriteLine("5. Exponeciacion");
@@ -34,7 +34,7 @@ namespace ISNP066724_Bloque1
                         Positivo_o_Negativo();
                         break;
                     case 2:
-                        resta();
+                        TablaMultipicar();
                         break;
                     case 3:
                         multiplicacion();
@@ -74,12 +74,13 @@ namespace ISNP066724_Bloque1
         }
         static void Positivo_o_Negativo()
         {
-            Console.WriteLine("\nPositivo_o_Negativo");
+            Console.WriteLine("Positivo_o_Negativo");
             int numero;
 
             do
             {
-                Console.Write("Ingresa un número (0 para salir): ");
+                Console.WriteLine("\nIngresa un número:");
+                Console.WriteLine("(0 para salir)");
                 numero = int.Parse(Console.ReadLine());
 
                 if (numero > 0)
@@ -97,18 +98,38 @@ namespace ISNP066724_Bloque1
 
             } while (numero != 0);
 
-            Console.WriteLine("Programa terminado ( ͡° ͜ʖ ͡°)");
+            Console.WriteLine("PROGRAMA TERMINADO");
         }
-        static void resta()
+        static void TablaMultipicar()
         {
-            Console.Write("Num 1: ");
-            double num1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("TablaMultipicar");
+            int numero;
 
-            Console.Write("Num 2: ");
-            double num2 = double.Parse(Console.ReadLine());
+            do
+            {
+                Console.Write("\nIngresa un número entre 1 y 10:");
+                Console.WriteLine("(0 para salir");
+                numero = int.Parse(Console.ReadLine());
 
-            double respuesta = num1 - num2;
-            Console.WriteLine("La resta es igual a: {0}", respuesta);
+                if (numero > 0 && numero <= 10)
+                {
+                    Console.WriteLine($"\nTabla de multiplicar del {numero}:");
+
+                    
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        Console.WriteLine($"{numero} x {i} = {numero * i}");
+                    }
+                    Console.WriteLine();
+                }
+                else if (numero != 0)
+                {
+                    Console.WriteLine("Por favor, ingresa un número válido entre 1 y 10.");
+                }
+
+            } while (numero != 0);
+
+            Console.WriteLine("PROGRAMA TERMINADO");
         }
         static void multiplicacion()
         {
