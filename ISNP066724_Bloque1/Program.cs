@@ -83,6 +83,7 @@ namespace ISNP066724_Bloque1
         }
         
         
+
         static void TablaMultipicar()
         {
             Console.WriteLine("Tabla de multipicar");
@@ -161,9 +162,6 @@ namespace ISNP066724_Bloque1
             Console.WriteLine("PROGRAMA FINALIZADO\n");
             Console.Clear();
         }
-
-
-
         static bool EsPrimo(int numero)
         {
             // Los números menores o iguales a 1 no son primos
@@ -182,6 +180,8 @@ namespace ISNP066724_Bloque1
             }
             return true; // Si no fue divisible por ningún número, es primo
         }
+
+
         static void Calcularpromedio()
         {
             Console.WriteLine("Calcular Promedio");
@@ -218,5 +218,4 @@ namespace ISNP066724_Bloque1
             
         }
     }
-
 }
